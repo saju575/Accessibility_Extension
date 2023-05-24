@@ -1,0 +1,26 @@
+{
+    "name":"my extension",
+    "version":"0.1.0",
+    "description":"my extension",
+    "manifest_version":3,
+    "content_scripts":[
+        {
+            "matches": ["http://*/*","https://*/*"],
+            "js":["contentScript.js"]
+        }
+
+    ],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "action":{
+    "default_icon":{
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
+      },
+      "default_title": "My Bookmarks",
+      "default_popup": "popup.html"
+    },
+    "permissions":["tabs","activeTab"]
+}
